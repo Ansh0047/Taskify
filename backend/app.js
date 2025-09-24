@@ -22,8 +22,8 @@ app.use(cors({
 
 
 // if there is some common route then we can add the prefix so that it is already added before it hits
-app.use("/users", userRouter);
-app.use("/task", taskRouter);
+app.use("/api/users", userRouter);
+app.use("/api/task", taskRouter);
 
 
 
