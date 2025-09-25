@@ -4,8 +4,9 @@ import Header from './components/Header';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Register from './pages/Register';
+import { Toaster } from 'react-hot-toast';
 
-export const url = import.meta.env.VITE_API_URL;
+export const url = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
       </Routes>
+      <Toaster />
     </Router>
   )
 }
